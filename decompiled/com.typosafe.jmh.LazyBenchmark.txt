@@ -1,6 +1,6 @@
 Compiled from "LazyBenchmark.java"
-public class com.typosafe.jmh.LazyBenchmark {
-  public com.typosafe.jmh.LazyBenchmark();
+public class com.typosafe.jmh.LazyBench {
+  public com.typosafe.jmh.LazyBench();
     Code:
        0: aload_0
        1: invokespecial #1                  // Method java/lang/Object."<init>":()V

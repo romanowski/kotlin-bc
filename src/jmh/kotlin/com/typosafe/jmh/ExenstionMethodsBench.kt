@@ -11,7 +11,7 @@ import com.typosafe.java.updateFromLoginExt
 @Warmup(time = 100, timeUnit = TimeUnit.MILLISECONDS, iterations = 10)
 @Measurement(time = 200, timeUnit = TimeUnit.MILLISECONDS, iterations = 5)
 @Fork(value = 1)
-open class KotlinSpecific {
+open class ExenstionMethodsBench {
 
     @Benchmark
     fun extensionFunction(bh: Blackhole) {

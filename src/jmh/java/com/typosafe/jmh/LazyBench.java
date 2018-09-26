@@ -17,7 +17,7 @@ import static com.typosafe.Instances.logins;
 @Warmup(time = 20, timeUnit = TimeUnit.MILLISECONDS, iterations = 10)
 @Measurement(time = 40, timeUnit = TimeUnit.MILLISECONDS, iterations = 5)
 @Fork(value = 4)
-public class LazyBenchmark {
+public class LazyBench {
   @Benchmark
   public void testJavaNoSync(Blackhole bh) {
     for (String name : logins) {

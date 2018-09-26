@@ -1,5 +1,5 @@
-Compiled from "KotlinSpecific.kt"
-public class com.typosafe.jmh.KotlinSpecific {
+Compiled from "ExenstionMethodsBench.kt"
+public class com.typosafe.jmh.ExenstionMethodsBench {
   public final void extensionFunction(org.openjdk.jmh.infra.Blackhole);
     Code:
        0: aload_1
@@ -88,7 +88,7 @@ public class com.typosafe.jmh.KotlinSpecific {
       63: goto          24
       66: return
 
-  public com.typosafe.jmh.KotlinSpecific();
+  public com.typosafe.jmh.ExenstionMethodsBench();
     Code:
        0: aload_0
        1: invokespecial #105                // Method java/lang/Object."<init>":()V

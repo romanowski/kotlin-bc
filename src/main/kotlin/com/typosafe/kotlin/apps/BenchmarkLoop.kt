@@ -7,7 +7,7 @@ fun main(args: Array<String> ){
     val kotlinMethods = KotlinMethods()
     val javaMethods = JavaMethods()
 
-    val N = 9000000
+    val N = 1000000
 
     val beforeKotlin = System.nanoTime()
     for(i in 1..N) kotlinMethods.size("Ala")

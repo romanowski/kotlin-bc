@@ -1,7 +1,7 @@
 Benchmark                                              Mode  Cnt      Score       Error   Units
-Lambdas.testLambdaJava                                thrpt    5     16.450 ±     0.511  ops/ms
-Lambdas.testLambdaKotlin                              thrpt    5     16.008 ±     0.129  ops/ms
-Lambdas.testPassingJavaClosure                        thrpt    5   4805.591 ±    70.232  ops/ms
-Lambdas.testPassingJavaLambda                         thrpt    5   6649.444 ±   119.157  ops/ms
-Lambdas.testPassingKotlinClosure                      thrpt    5   4823.601 ±    85.805  ops/ms
-Lambdas.testPassingKotlinLambda                       thrpt    5   6714.370 ±    52.360  ops/ms
+Lambdas.testLambdaJava                                thrpt    5     16.335 ±     0.195  ops/ms
+Lambdas.testLambdaKotlin                              thrpt    5     15.509 ±     0.425  ops/ms
+Lambdas.testPassingJavaClosure                        thrpt    5   4608.819 ±    31.786  ops/ms
+Lambdas.testPassingJavaLambda                         thrpt    5   6392.282 ±   137.396  ops/ms
+Lambdas.testPassingKotlinClosure                      thrpt    5   4643.989 ±    61.291  ops/ms
+Lambdas.testPassingKotlinLambda                       thrpt    5   6325.388 ±   143.975  ops/ms

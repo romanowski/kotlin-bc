@@ -1,0 +1,4 @@
+Benchmark                                              Mode  Cnt      Score       Error   Units
+ExenstionMethodsBench.companionObjectFunction         thrpt    5      0.178 ±     0.152  ops/us
+ExenstionMethodsBench.extensionFunction               thrpt    5      0.180 ±     0.162  ops/us
+ExenstionMethodsBench.staticFunction                  thrpt    5      0.178 ±     0.152  ops/us
