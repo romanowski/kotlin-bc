@@ -23,13 +23,13 @@ public class com.typosafe.jmh.Lambdas {
   public java.lang.Object testPassingJavaLambda();
     Code:
        0: getstatic     #2                  // Field com/typosafe/Instances.javaLambdas:Lcom/typosafe/java/JavaLambdas;
-       3: invokevirtual #7                  // Method com/typosafe/java/JavaLambdas.passClosure:()Ljava/lang/String;
+       3: invokevirtual #7                  // Method com/typosafe/java/JavaLambdas.passLambda:()Ljava/lang/String;
        6: areturn
 
   public java.lang.Object testPassingKotlinLambda();
     Code:
        0: getstatic     #5                  // Field com/typosafe/Instances.kotlinLambdas:Lcom/typosafe/kotlin/KotlinLambdas;
-       3: invokevirtual #8                  // Method com/typosafe/kotlin/KotlinLambdas.passClosure:()Ljava/lang/String;
+       3: invokevirtual #8                  // Method com/typosafe/kotlin/KotlinLambdas.passLambda:()Ljava/lang/String;
        6: areturn
 
   public java.lang.Object testPassingJavaClosure();

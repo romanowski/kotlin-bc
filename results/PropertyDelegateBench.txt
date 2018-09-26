@@ -1,5 +1,5 @@
 Benchmark                                              Mode  Cnt      Score       Error   Units
-PropertyDelegateBench.testPropertyDelegateBaseline    thrpt   20      0.067 ±     0.004  ops/us
-PropertyDelegateBench.testPropertyDelegateJava        thrpt   20      0.067 ±     0.004  ops/us
-PropertyDelegateBench.testPropertyDelegateKotlin      thrpt   20      0.067 ±     0.004  ops/us
+PropertyDelegateBench.testPropertyDelegateBaseline    thrpt   20      0.068 ±     0.007  ops/us
+PropertyDelegateBench.testPropertyDelegateJava        thrpt   20      0.068 ±     0.005  ops/us
+PropertyDelegateBench.testPropertyDelegateKotlin      thrpt   20      0.068 ±     0.006  ops/us
 PropertyDelegateBench.testPropertyDelegateKotlinSlow  thrpt   20      0.068 ±     0.004  ops/us

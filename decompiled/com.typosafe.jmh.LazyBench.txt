@@ -1,4 +1,4 @@
-Compiled from "LazyBenchmark.java"
+Compiled from "LazyBench.java"
 public class com.typosafe.jmh.LazyBench {
   public com.typosafe.jmh.LazyBench();
     Code:

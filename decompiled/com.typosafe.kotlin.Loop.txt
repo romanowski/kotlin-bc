@@ -1,4 +1,4 @@
-Compiled from "LazyPropertu.kt"
+Compiled from "LazyProperty.kt"
 public final class com.typosafe.kotlin.Loop {
   static final kotlin.reflect.KProperty[] $$delegatedProperties;
 

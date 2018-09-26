@@ -91,7 +91,7 @@ public class com.typosafe.jmh.MethodCallsBench {
        8: astore_2
        9: aload_2
       10: invokeinterface #4,  1            // InterfaceMethod java/util/Iterator.hasNext:()Z
-      15: ifeq          47
+      15: ifeq          48
       18: aload_2
       19: invokeinterface #5,  1            // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
       24: checkcast     #12                 // class java/lang/String
@@ -99,13 +99,14 @@ public class com.typosafe.jmh.MethodCallsBench {
       28: aload_1
       29: aload_3
       30: invokevirtual #16                 // Method java/lang/String.length:()I
-      33: ifle          40
-      36: iconst_1
-      37: goto          41
-      40: iconst_0
-      41: invokevirtual #14                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Z)V
-      44: goto          9
-      47: return
+      33: iconst_4
+      34: if_icmple     41
+      37: iconst_1
+      38: goto          42
+      41: iconst_0
+      42: invokevirtual #14                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Z)V
+      45: goto          9
+      48: return
 
   public int testFibJava();
     Code:

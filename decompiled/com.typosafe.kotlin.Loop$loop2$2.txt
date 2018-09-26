@@ -1,4 +1,4 @@
-Compiled from "LazyPropertu.kt"
+Compiled from "LazyProperty.kt"
 final class com.typosafe.kotlin.Loop$loop2$2 extends kotlin.jvm.internal.Lambda implements kotlin.jvm.functions.Function0<java.lang.String> {
   final com.typosafe.kotlin.Loop this$0;
 

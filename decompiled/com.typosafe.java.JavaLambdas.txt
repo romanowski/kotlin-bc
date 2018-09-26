@@ -19,7 +19,7 @@ public class com.typosafe.java.JavaLambdas {
       34: checkcast     #9                  // class java/util/List
       37: areturn
 
-  public java.lang.String passClosure();
+  public java.lang.String passLambda();
     Code:
        0: invokedynamic #10,  0             // InvokeDynamic #2:apply:()Ljava/util/function/Function;
        5: invokestatic  #11                 // Method com/typosafe/Instances.printUserList:(Ljava/util/function/Function;)Ljava/lang/String;
@@ -48,7 +48,7 @@ public class com.typosafe.java.JavaLambdas {
       23: invokevirtual #18                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
       26: areturn
 
-  private static java.lang.String lambda$passClosure$2(java.lang.String);
+  private static java.lang.String lambda$passLambda$2(java.lang.String);
     Code:
        0: aload_0
        1: invokevirtual #16                 // Method java/lang/String.toLowerCase:()Ljava/lang/String;

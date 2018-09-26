@@ -107,9 +107,9 @@ public final class com.typosafe.kotlin.KotlinLambdas {
      232: checkcast     #55                 // class java/util/List
      235: areturn
 
-  public final java.lang.String passClosure();
+  public final java.lang.String passLambda();
     Code:
-       0: getstatic     #120                // Field com/typosafe/kotlin/KotlinLambdas$passClosure$1.INSTANCE:Lcom/typosafe/kotlin/KotlinLambdas$passClosure$1;
+       0: getstatic     #120                // Field com/typosafe/kotlin/KotlinLambdas$passLambda$1.INSTANCE:Lcom/typosafe/kotlin/KotlinLambdas$passLambda$1;
        3: checkcast     #122                // class java/util/function/Function
        6: invokestatic  #128                // Method com/typosafe/Instances.printUserList:(Ljava/util/function/Function;)Ljava/lang/String;
        9: dup
@@ -120,12 +120,12 @@ public final class com.typosafe.kotlin.KotlinLambdas {
   public final java.lang.String passClosure(java.lang.String);
     Code:
        0: aload_1
-       1: ldc           #133                // String prefix
+       1: ldc           #134                // String prefix
        3: invokestatic  #15                 // Method kotlin/jvm/internal/Intrinsics.checkParameterIsNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
-       6: new           #135                // class com/typosafe/kotlin/KotlinLambdas$passClosure$2
+       6: new           #136                // class com/typosafe/kotlin/KotlinLambdas$passClosure$1
        9: dup
       10: aload_1
-      11: invokespecial #136                // Method com/typosafe/kotlin/KotlinLambdas$passClosure$2."<init>":(Ljava/lang/String;)V
+      11: invokespecial #137                // Method com/typosafe/kotlin/KotlinLambdas$passClosure$1."<init>":(Ljava/lang/String;)V
       14: checkcast     #122                // class java/util/function/Function
       17: invokestatic  #128                // Method com/typosafe/Instances.printUserList:(Ljava/util/function/Function;)Ljava/lang/String;
       20: dup
@@ -136,6 +136,6 @@ public final class com.typosafe.kotlin.KotlinLambdas {
   public com.typosafe.kotlin.KotlinLambdas();
     Code:
        0: aload_0
-       1: invokespecial #137                // Method java/lang/Object."<init>":()V
+       1: invokespecial #138                // Method java/lang/Object."<init>":()V
        4: return
 }

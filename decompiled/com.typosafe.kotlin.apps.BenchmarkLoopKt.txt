@@ -70,7 +70,7 @@ public final class com.typosafe.kotlin.apps.BenchmarkLoopKt {
      131: invokevirtual #47                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
      134: lload         6
      136: invokevirtual #55                 // Method java/lang/StringBuilder.append:(J)Ljava/lang/StringBuilder;
-     139: ldc           #57                 // String  ms Java:
+     139: ldc           #57                 // String  us Java:
      141: invokevirtual #47                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
      144: lload         10
      146: invokevirtual #55                 // Method java/lang/StringBuilder.append:(J)Ljava/lang/StringBuilder;

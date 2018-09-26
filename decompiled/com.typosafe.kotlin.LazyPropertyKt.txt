@@ -1,5 +1,5 @@
-Compiled from "LazyPropertu.kt"
-public final class com.typosafe.kotlin.LazyPropertuKt {
+Compiled from "LazyProperty.kt"
+public final class com.typosafe.kotlin.LazyPropertyKt {
   public static final void main(java.lang.String[]);
     Code:
        0: aload_0
