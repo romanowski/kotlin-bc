@@ -1,0 +1,63 @@
+Compiled from "DelegatedProperty.kt"
+public abstract class com.typosafe.kotlin.AbstractField implements com.typosafe.kotlin.DelegateProvider {
+  static final kotlin.reflect.KProperty[] $$delegatedProperties;
+
+  private final kotlin.properties.ReadWriteProperty name$delegate;
+
+  static {};
+    Code:
+       0: iconst_1
+       1: anewarray     #70                 // class kotlin/reflect/KProperty
+       4: dup
+       5: iconst_0
+       6: new           #72                 // class kotlin/jvm/internal/MutablePropertyReference1Impl
+       9: dup
+      10: ldc           #2                  // class com/typosafe/kotlin/AbstractField
+      12: invokestatic  #78                 // Method kotlin/jvm/internal/Reflection.getOrCreateKotlinClass:(Ljava/lang/Class;)Lkotlin/reflect/KClass;
+      15: ldc           #79                 // String name
+      17: ldc           #81                 // String getName()Ljava/lang/String;
+      19: invokespecial #84                 // Method kotlin/jvm/internal/MutablePropertyReference1Impl."<init>":(Lkotlin/reflect/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+      22: invokestatic  #88                 // Method kotlin/jvm/internal/Reflection.mutableProperty1:(Lkotlin/jvm/internal/MutablePropertyReference1;)Lkotlin/reflect/KMutableProperty1;
+      25: checkcast     #70                 // class kotlin/reflect/KProperty
+      28: aastore
+      29: putstatic     #19                 // Field $$delegatedProperties:[Lkotlin/reflect/KProperty;
+      32: return
+
+  public final java.lang.String getName();
+    Code:
+       0: aload_0
+       1: getfield      #17                 // Field name$delegate:Lkotlin/properties/ReadWriteProperty;
+       4: aload_0
+       5: getstatic     #19                 // Field $$delegatedProperties:[Lkotlin/reflect/KProperty;
+       8: iconst_0
+       9: aaload
+      10: invokeinterface #25,  3           // InterfaceMethod kotlin/properties/ReadWriteProperty.getValue:(Ljava/lang/Object;Lkotlin/reflect/KProperty;)Ljava/lang/Object;
+      15: checkcast     #27                 // class java/lang/String
+      18: areturn
+
+  public final void setName(java.lang.String);
+    Code:
+       0: aload_1
+       1: ldc           #33                 // String <set-?>
+       3: invokestatic  #39                 // Method kotlin/jvm/internal/Intrinsics.checkParameterIsNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       6: aload_0
+       7: getfield      #17                 // Field name$delegate:Lkotlin/properties/ReadWriteProperty;
+      10: aload_0
+      11: getstatic     #19                 // Field $$delegatedProperties:[Lkotlin/reflect/KProperty;
+      14: iconst_0
+      15: aaload
+      16: aload_1
+      17: invokeinterface #43,  4           // InterfaceMethod kotlin/properties/ReadWriteProperty.setValue:(Ljava/lang/Object;Lkotlin/reflect/KProperty;Ljava/lang/Object;)V
+      22: return
+
+  public com.typosafe.kotlin.AbstractField();
+    Code:
+       0: aload_0
+       1: invokespecial #47                 // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: aload_0
+       6: ldc           #49                 // String Ala
+       8: invokevirtual #53                 // Method Delegate:(Ljava/lang/String;)Lkotlin/properties/ReadWriteProperty;
+      11: putfield      #17                 // Field name$delegate:Lkotlin/properties/ReadWriteProperty;
+      14: return
+}

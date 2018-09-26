@@ -1,0 +1,6 @@
+Compiled from "JAnimal.java"
+public interface com.typosafe.java.animals.JAnimal {
+  public abstract java.lang.String eats();
+
+  public abstract java.lang.String name();
+}

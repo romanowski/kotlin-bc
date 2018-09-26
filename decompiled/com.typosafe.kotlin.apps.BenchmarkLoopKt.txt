@@ -1,0 +1,85 @@
+Compiled from "BenchmarkLoop.kt"
+public final class com.typosafe.kotlin.apps.BenchmarkLoopKt {
+  public static final void main(java.lang.String[]);
+    Code:
+       0: aload_0
+       1: ldc           #9                  // String args
+       3: invokestatic  #15                 // Method kotlin/jvm/internal/Intrinsics.checkParameterIsNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       6: new           #17                 // class com/typosafe/kotlin/KotlinMethods
+       9: dup
+      10: invokespecial #21                 // Method com/typosafe/kotlin/KotlinMethods."<init>":()V
+      13: astore_1
+      14: new           #23                 // class com/typosafe/java/JavaMethods
+      17: dup
+      18: invokespecial #24                 // Method com/typosafe/java/JavaMethods."<init>":()V
+      21: astore_2
+      22: ldc           #25                 // int 9000000
+      24: istore_3
+      25: invokestatic  #31                 // Method java/lang/System.nanoTime:()J
+      28: lstore        4
+      30: iconst_1
+      31: istore        6
+      33: iload_3
+      34: istore        7
+      36: aload_1
+      37: ldc           #33                 // String Ala
+      39: invokevirtual #37                 // Method com/typosafe/kotlin/KotlinMethods.size:(Ljava/lang/Object;)I
+      42: pop
+      43: iload         6
+      45: iload         7
+      47: if_icmpeq     56
+      50: iinc          6, 1
+      53: goto          36
+      56: invokestatic  #31                 // Method java/lang/System.nanoTime:()J
+      59: lload         4
+      61: lsub
+      62: sipush        1000
+      65: i2l
+      66: ldiv
+      67: lstore        6
+      69: invokestatic  #31                 // Method java/lang/System.nanoTime:()J
+      72: lstore        8
+      74: iconst_1
+      75: istore        10
+      77: iload_3
+      78: istore        11
+      80: aload_2
+      81: ldc           #33                 // String Ala
+      83: invokevirtual #38                 // Method com/typosafe/java/JavaMethods.size:(Ljava/lang/Object;)I
+      86: pop
+      87: iload         10
+      89: iload         11
+      91: if_icmpeq     100
+      94: iinc          10, 1
+      97: goto          80
+     100: invokestatic  #31                 // Method java/lang/System.nanoTime:()J
+     103: lload         8
+     105: lsub
+     106: sipush        1000
+     109: i2l
+     110: ldiv
+     111: lstore        10
+     113: new           #40                 // class java/lang/StringBuilder
+     116: dup
+     117: invokespecial #41                 // Method java/lang/StringBuilder."<init>":()V
+     120: ldc           #43                 // String Running
+     122: invokevirtual #47                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     125: iload_3
+     126: invokevirtual #50                 // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+     129: ldc           #52                 // String  times. Kotlin:
+     131: invokevirtual #47                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     134: lload         6
+     136: invokevirtual #55                 // Method java/lang/StringBuilder.append:(J)Ljava/lang/StringBuilder;
+     139: ldc           #57                 // String  ms Java:
+     141: invokevirtual #47                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     144: lload         10
+     146: invokevirtual #55                 // Method java/lang/StringBuilder.append:(J)Ljava/lang/StringBuilder;
+     149: ldc           #59                 // String  ms
+     151: invokevirtual #47                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     154: invokevirtual #63                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     157: astore        12
+     159: getstatic     #67                 // Field java/lang/System.out:Ljava/io/PrintStream;
+     162: aload         12
+     164: invokevirtual #73                 // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+     167: return
+}

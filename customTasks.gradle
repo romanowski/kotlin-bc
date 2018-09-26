@@ -1,0 +1,65 @@
+import java.util.jar.JarFile
+
+jmh {
+    resultsFile project.file("results/all.txt")
+    resultFormat 'TEXT'
+}
+
+
+File javapOut = new File(project.buildDir.getParent(), "decompiled")
+
+task cleanJavapOut(type: Delete) {
+    delete javapOut
+}
+
+task runJavap {
+    dependsOn jar, jmhJar, cleanJavapOut
+    doLast {
+        javapOut.mkdirs()
+
+        File jarFile = jmhJar.archivePath
+
+        JarFile content = new JarFile(jarFile)
+        List<String> classes = null
+        try {
+            classes = content.entries().toList().collect { it.name }.findAll { it.endsWith(".class") }
+                    .collect { it.replace(File.separator, '.').substring(0, it.length() - '.class'.length()) }
+        } finally {
+            content.close()
+        }
+
+        def runJavap = { className, options, prefix ->
+            def javapArgs = options.split(" ") + ['-cp', jarFile, className]
+            def target = "${javapOut.getAbsolutePath()}/$className${prefix}.txt"
+            exec {
+                executable 'javap'
+                args javapArgs
+                standardOutput new FileOutputStream(file(target))
+            }
+        }
+
+        classes.findAll { !it.contains(".generated.") }.forEach { className ->
+            runJavap(className, "-p -c", "")
+            //   runJavap(className, "-p -c -s -v -l", "-full")
+            //   runJavap(className, "-p -constants", "-sigs")
+
+        }
+    }
+}
+
+task niceResults {
+    dependsOn project.tasks.jmh
+    doLast {
+        File base = project.file("results")
+        List<String> lines = jmh.resultsFile.readLines()
+        String header = lines.get(0)
+        lines.groupBy { String line ->
+            def groups = line.split('\\.')
+            if (groups.length > 1) groups[0]
+            else ""
+        }.forEach { name, results ->
+            if(name)
+                new File(base, name + ".txt").text = "$header\n${results.join("\n")}"
+        }
+    }
+}

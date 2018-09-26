@@ -1,0 +1,18 @@
+Compiled from "DelegatedProperty.kt"
+public class com.typosafe.kotlin.ReallySlowDelegate extends com.typosafe.kotlin.AbstractField implements com.typosafe.kotlin.MyDelegageProvider {
+  public com.typosafe.kotlin.ReallySlowDelegate();
+    Code:
+       0: aload_0
+       1: invokespecial #10                 // Method com/typosafe/kotlin/AbstractField."<init>":()V
+       4: return
+
+  public <T extends com.typosafe.kotlin.DelegateProvider> kotlin.properties.ReadWriteProperty<T, java.lang.String> Delegate(java.lang.String);
+    Code:
+       0: aload_1
+       1: ldc           #17                 // String initial
+       3: invokestatic  #23                 // Method kotlin/jvm/internal/Intrinsics.checkParameterIsNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       6: aload_0
+       7: aload_1
+       8: invokestatic  #28                 // Method com/typosafe/kotlin/MyDelegageProvider$DefaultImpls.Delegate:(Lcom/typosafe/kotlin/MyDelegageProvider;Ljava/lang/String;)Lkotlin/properties/ReadWriteProperty;
+      11: areturn
+}

@@ -1,0 +1,63 @@
+Compiled from "DelegatedProperty.kt"
+public final class com.typosafe.kotlin.DelegatedProperty {
+  static final kotlin.reflect.KProperty[] $$delegatedProperties;
+
+  private final com.typosafe.kotlin.UppercaseDelegate name$delegate;
+
+  static {};
+    Code:
+       0: iconst_1
+       1: anewarray     #63                 // class kotlin/reflect/KProperty
+       4: dup
+       5: iconst_0
+       6: new           #65                 // class kotlin/jvm/internal/MutablePropertyReference1Impl
+       9: dup
+      10: ldc           #2                  // class com/typosafe/kotlin/DelegatedProperty
+      12: invokestatic  #71                 // Method kotlin/jvm/internal/Reflection.getOrCreateKotlinClass:(Ljava/lang/Class;)Lkotlin/reflect/KClass;
+      15: ldc           #72                 // String name
+      17: ldc           #74                 // String getName()Ljava/lang/String;
+      19: invokespecial #77                 // Method kotlin/jvm/internal/MutablePropertyReference1Impl."<init>":(Lkotlin/reflect/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+      22: invokestatic  #81                 // Method kotlin/jvm/internal/Reflection.mutableProperty1:(Lkotlin/jvm/internal/MutablePropertyReference1;)Lkotlin/reflect/KMutableProperty1;
+      25: checkcast     #63                 // class kotlin/reflect/KProperty
+      28: aastore
+      29: putstatic     #17                 // Field $$delegatedProperties:[Lkotlin/reflect/KProperty;
+      32: return
+
+  public final java.lang.String getName();
+    Code:
+       0: aload_0
+       1: getfield      #15                 // Field name$delegate:Lcom/typosafe/kotlin/UppercaseDelegate;
+       4: aload_0
+       5: getstatic     #17                 // Field $$delegatedProperties:[Lkotlin/reflect/KProperty;
+       8: iconst_0
+       9: aaload
+      10: invokevirtual #23                 // Method com/typosafe/kotlin/UppercaseDelegate.getValue:(Ljava/lang/Object;Lkotlin/reflect/KProperty;)Ljava/lang/String;
+      13: areturn
+
+  public final void setName(java.lang.String);
+    Code:
+       0: aload_1
+       1: ldc           #29                 // String <set-?>
+       3: invokestatic  #35                 // Method kotlin/jvm/internal/Intrinsics.checkParameterIsNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       6: aload_0
+       7: getfield      #15                 // Field name$delegate:Lcom/typosafe/kotlin/UppercaseDelegate;
+      10: aload_0
+      11: getstatic     #17                 // Field $$delegatedProperties:[Lkotlin/reflect/KProperty;
+      14: iconst_0
+      15: aaload
+      16: aload_1
+      17: invokevirtual #39                 // Method com/typosafe/kotlin/UppercaseDelegate.setValue:(Ljava/lang/Object;Lkotlin/reflect/KProperty;Ljava/lang/String;)V
+      20: return
+
+  public com.typosafe.kotlin.DelegatedProperty();
+    Code:
+       0: aload_0
+       1: invokespecial #43                 // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: new           #19                 // class com/typosafe/kotlin/UppercaseDelegate
+       8: dup
+       9: ldc           #45                 // String Ala
+      11: invokespecial #47                 // Method com/typosafe/kotlin/UppercaseDelegate."<init>":(Ljava/lang/String;)V
+      14: putfield      #15                 // Field name$delegate:Lcom/typosafe/kotlin/UppercaseDelegate;
+      17: return
+}

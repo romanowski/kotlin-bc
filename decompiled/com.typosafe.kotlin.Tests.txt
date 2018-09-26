@@ -1,0 +1,10 @@
+Compiled from "Tests.kt"
+public final class com.typosafe.kotlin.Tests extends io.kotlintest.specs.StringSpec {
+  public com.typosafe.kotlin.Tests();
+    Code:
+       0: aload_0
+       1: getstatic     #12                 // Field com/typosafe/kotlin/Tests$1.INSTANCE:Lcom/typosafe/kotlin/Tests$1;
+       4: checkcast     #14                 // class kotlin/jvm/functions/Function1
+       7: invokespecial #17                 // Method io/kotlintest/specs/StringSpec."<init>":(Lkotlin/jvm/functions/Function1;)V
+      10: return
+}

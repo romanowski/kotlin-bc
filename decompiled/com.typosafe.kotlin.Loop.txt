@@ -1,0 +1,93 @@
+Compiled from "LazyPropertu.kt"
+public final class com.typosafe.kotlin.Loop {
+  static final kotlin.reflect.KProperty[] $$delegatedProperties;
+
+  private final kotlin.Lazy loop1$delegate;
+
+  private final kotlin.Lazy loop2$delegate;
+
+  static {};
+    Code:
+       0: iconst_2
+       1: anewarray     #67                 // class kotlin/reflect/KProperty
+       4: dup
+       5: iconst_0
+       6: new           #69                 // class kotlin/jvm/internal/PropertyReference1Impl
+       9: dup
+      10: ldc           #2                  // class com/typosafe/kotlin/Loop
+      12: invokestatic  #75                 // Method kotlin/jvm/internal/Reflection.getOrCreateKotlinClass:(Ljava/lang/Class;)Lkotlin/reflect/KClass;
+      15: ldc           #76                 // String loop1
+      17: ldc           #78                 // String getLoop1()Ljava/lang/String;
+      19: invokespecial #81                 // Method kotlin/jvm/internal/PropertyReference1Impl."<init>":(Lkotlin/reflect/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+      22: invokestatic  #85                 // Method kotlin/jvm/internal/Reflection.property1:(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/reflect/KProperty1;
+      25: checkcast     #67                 // class kotlin/reflect/KProperty
+      28: aastore
+      29: dup
+      30: iconst_1
+      31: new           #69                 // class kotlin/jvm/internal/PropertyReference1Impl
+      34: dup
+      35: ldc           #2                  // class com/typosafe/kotlin/Loop
+      37: invokestatic  #75                 // Method kotlin/jvm/internal/Reflection.getOrCreateKotlinClass:(Ljava/lang/Class;)Lkotlin/reflect/KClass;
+      40: ldc           #86                 // String loop2
+      42: ldc           #88                 // String getLoop2()Ljava/lang/String;
+      44: invokespecial #81                 // Method kotlin/jvm/internal/PropertyReference1Impl."<init>":(Lkotlin/reflect/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+      47: invokestatic  #85                 // Method kotlin/jvm/internal/Reflection.property1:(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/reflect/KProperty1;
+      50: checkcast     #67                 // class kotlin/reflect/KProperty
+      53: aastore
+      54: putstatic     #17                 // Field $$delegatedProperties:[Lkotlin/reflect/KProperty;
+      57: return
+
+  public final java.lang.String getLoop1();
+    Code:
+       0: aload_0
+       1: getfield      #15                 // Field loop1$delegate:Lkotlin/Lazy;
+       4: astore_1
+       5: aload_0
+       6: astore_2
+       7: getstatic     #17                 // Field $$delegatedProperties:[Lkotlin/reflect/KProperty;
+      10: iconst_0
+      11: aaload
+      12: astore_3
+      13: aload_1
+      14: invokeinterface #23,  1           // InterfaceMethod kotlin/Lazy.getValue:()Ljava/lang/Object;
+      19: checkcast     #25                 // class java/lang/String
+      22: areturn
+
+  public final java.lang.String getLoop2();
+    Code:
+       0: aload_0
+       1: getfield      #31                 // Field loop2$delegate:Lkotlin/Lazy;
+       4: astore_1
+       5: aload_0
+       6: astore_2
+       7: getstatic     #17                 // Field $$delegatedProperties:[Lkotlin/reflect/KProperty;
+      10: iconst_1
+      11: aaload
+      12: astore_3
+      13: aload_1
+      14: invokeinterface #23,  1           // InterfaceMethod kotlin/Lazy.getValue:()Ljava/lang/Object;
+      19: checkcast     #25                 // class java/lang/String
+      22: areturn
+
+  public com.typosafe.kotlin.Loop();
+    Code:
+       0: aload_0
+       1: invokespecial #34                 // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: new           #36                 // class com/typosafe/kotlin/Loop$loop1$2
+       8: dup
+       9: aload_0
+      10: invokespecial #39                 // Method com/typosafe/kotlin/Loop$loop1$2."<init>":(Lcom/typosafe/kotlin/Loop;)V
+      13: checkcast     #41                 // class kotlin/jvm/functions/Function0
+      16: invokestatic  #47                 // Method kotlin/LazyKt.lazy:(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
+      19: putfield      #15                 // Field loop1$delegate:Lkotlin/Lazy;
+      22: aload_0
+      23: new           #49                 // class com/typosafe/kotlin/Loop$loop2$2
+      26: dup
+      27: aload_0
+      28: invokespecial #50                 // Method com/typosafe/kotlin/Loop$loop2$2."<init>":(Lcom/typosafe/kotlin/Loop;)V
+      31: checkcast     #41                 // class kotlin/jvm/functions/Function0
+      34: invokestatic  #47                 // Method kotlin/LazyKt.lazy:(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
+      37: putfield      #31                 // Field loop2$delegate:Lkotlin/Lazy;
+      40: return
+}

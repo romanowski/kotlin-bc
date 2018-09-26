@@ -1,0 +1,27 @@
+Compiled from "DelegatedPropertyLikeJava.java"
+public class com.typosafe.java.DelegatedPropertyLikeJava {
+  private java.lang.String name;
+
+  public com.typosafe.java.DelegatedPropertyLikeJava();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: ldc           #2                  // String Ala
+       7: putfield      #3                  // Field name:Ljava/lang/String;
+      10: return
+
+  public java.lang.String getName();
+    Code:
+       0: aload_0
+       1: getfield      #3                  // Field name:Ljava/lang/String;
+       4: areturn
+
+  public void setName(java.lang.String);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokevirtual #4                  // Method java/lang/String.toUpperCase:()Ljava/lang/String;
+       5: putfield      #3                  // Field name:Ljava/lang/String;
+       8: return
+}

@@ -1,0 +1,13 @@
+Compiled from "DataPojo.kt"
+public final class com.typosafe.kotlin.Internal {
+  public final int ala$PerformancePG();
+    Code:
+       0: bipush        123
+       2: ireturn
+
+  public com.typosafe.kotlin.Internal();
+    Code:
+       0: aload_0
+       1: invokespecial #12                 // Method java/lang/Object."<init>":()V
+       4: return
+}

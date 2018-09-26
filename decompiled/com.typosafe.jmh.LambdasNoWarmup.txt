@@ -1,0 +1,8 @@
+Compiled from "LambdasNoWarmup.java"
+public class com.typosafe.jmh.LambdasNoWarmup extends com.typosafe.jmh.Lambdas {
+  public com.typosafe.jmh.LambdasNoWarmup();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method com/typosafe/jmh/Lambdas."<init>":()V
+       4: return
+}

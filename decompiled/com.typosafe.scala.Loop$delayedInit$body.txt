@@ -1,0 +1,25 @@
+Compiled from "SLazyProperty.scala"
+public final class com.typosafe.scala.Loop$delayedInit$body extends scala.runtime.AbstractFunction0 {
+  private final com.typosafe.scala.Loop$ $outer;
+
+  public final java.lang.Object apply();
+    Code:
+       0: aload_0
+       1: getfield      #11                 // Field $outer:Lcom/typosafe/scala/Loop$;
+       4: invokevirtual #17                 // Method com/typosafe/scala/Loop$.delayedEndpoint$com$typosafe$scala$Loop$1:()V
+       7: getstatic     #23                 // Field scala/runtime/BoxedUnit.UNIT:Lscala/runtime/BoxedUnit;
+      10: areturn
+
+  public com.typosafe.scala.Loop$delayedInit$body(com.typosafe.scala.Loop$);
+    Code:
+       0: aload_1
+       1: ifnonnull     6
+       4: aconst_null
+       5: athrow
+       6: aload_0
+       7: aload_1
+       8: putfield      #11                 // Field $outer:Lcom/typosafe/scala/Loop$;
+      11: aload_0
+      12: invokespecial #29                 // Method scala/runtime/AbstractFunction0."<init>":()V
+      15: return
+}

@@ -1,0 +1,4 @@
+Compiled from "DelegatedProperty.kt"
+public interface com.typosafe.kotlin.MyDelegageProvider extends com.typosafe.kotlin.DelegateProvider {
+  public abstract <T extends com.typosafe.kotlin.DelegateProvider> kotlin.properties.ReadWriteProperty<T, java.lang.String> Delegate(java.lang.String);
+}

@@ -1,28 +1,26 @@
-import java.util.jar.JarFile
-
 buildscript {
-    ext.kotlin_version = '1.2.0'
+    ext.kotlin_version = '1.2.71'
 
     repositories {
         mavenCentral()
         jcenter()
         maven {
-            url "https://plugins.gradle.org/m2/"
+            url 'https://plugins.gradle.org/m2/'
         }
     }
+
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "me.champeau.gradle:jmh-gradle-plugin:0.4.7"
+        classpath 'me.champeau.gradle:jmh-gradle-plugin:0.4.7'
     }
 }
-
 
 group 'com.typosafe.kotlin'
 version '1.0-SNAPSHOT'
 
-apply plugin: "me.champeau.gradle.jmh"
+apply plugin: 'me.champeau.gradle.jmh'
 apply plugin: 'kotlin'
-
+apply plugin: 'scala'
 
 repositories {
     mavenCentral()
@@ -30,57 +28,21 @@ repositories {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    testCompile 'io.kotlintest:kotlintest-runner-junit5:3.1.7'
+    compile 'org.scala-lang:scala-library:2.11.12'
+
+
 }
 
 compileKotlin {
-    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.jvmTarget = '1.8'
 }
 compileTestKotlin {
-    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.jvmTarget = '1.8'
 }
 
-
-File javapOut = new File(project.buildDir, "generated")
-
-task cleanJavapOut(type: Delete){
-    delete javapOut
+test {
+    useJUnitPlatform()
 }
 
-String runJavap(String className, Stringoptions){
-    return
-}
-
-
-task runJavap {
-    dependsOn jar, cleanJavapOut
-    doLast {
-        javapOut.mkdirs()
-
-        JarFile content = new JarFile(jar.archivePath)
-        List<String> classes = null
-        try {
-            classes = content.entries().toList().collect{ it.name }.findAll { it.endsWith(".class")}
-                .collect { it.replace(File.separator, '.').substring(0, it.length() - '.class'.length())}
-        } finally {
-            content.close()
-        }
-
-        def runJavap = { className, options, prefix ->
-            def javapArgs = options.split(" ") + ['-cp', jar.archivePath, className]
-            def target = "${javapOut.getAbsolutePath()}/$className${prefix}.txt"
-            exec {
-                executable 'javap'
-                args javapArgs
-                standardOutput new FileOutputStream(file(target))
-            }
-        }
-
-        classes.forEach { className ->
-            runJavap(className, "-p -c", "")
-            runJavap(className, "-p -c -s -v -l", "full")
-            runJavap(className, "-p -constants", "sigs")
-
-        }
-
-    }
-}
+apply from: 'customTasks.gradle'

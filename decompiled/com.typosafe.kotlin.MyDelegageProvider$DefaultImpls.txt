@@ -1,0 +1,14 @@
+Compiled from "DelegatedProperty.kt"
+public final class com.typosafe.kotlin.MyDelegageProvider$DefaultImpls {
+  public static <T extends com.typosafe.kotlin.DelegateProvider> kotlin.properties.ReadWriteProperty<T, java.lang.String> Delegate(com.typosafe.kotlin.MyDelegageProvider, java.lang.String);
+    Code:
+       0: aload_1
+       1: ldc           #9                  // String initial
+       3: invokestatic  #15                 // Method kotlin/jvm/internal/Intrinsics.checkParameterIsNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       6: new           #17                 // class com/typosafe/kotlin/UppercaseDelegate
+       9: dup
+      10: aload_1
+      11: invokespecial #21                 // Method com/typosafe/kotlin/UppercaseDelegate."<init>":(Ljava/lang/String;)V
+      14: checkcast     #23                 // class kotlin/properties/ReadWriteProperty
+      17: areturn
+}

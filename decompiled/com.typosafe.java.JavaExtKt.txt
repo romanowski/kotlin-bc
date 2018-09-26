@@ -1,0 +1,31 @@
+Compiled from "JavaExt.kt"
+public final class com.typosafe.java.JavaExtKt {
+  public static final java.lang.String updateFromLoginExt(com.typosafe.java.Pojo, java.lang.String);
+    Code:
+       0: aload_0
+       1: ldc           #9                  // String $receiver
+       3: invokestatic  #15                 // Method kotlin/jvm/internal/Intrinsics.checkParameterIsNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       6: aload_1
+       7: ldc           #17                 // String login
+       9: invokestatic  #15                 // Method kotlin/jvm/internal/Intrinsics.checkParameterIsNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+      12: aload_0
+      13: aload_1
+      14: invokevirtual #23                 // Method com/typosafe/java/Pojo.setName:(Ljava/lang/String;)V
+      17: aload_0
+      18: aload_1
+      19: invokevirtual #29                 // Method java/lang/String.length:()I
+      22: invokevirtual #33                 // Method com/typosafe/java/Pojo.setAge:(I)V
+      25: new           #35                 // class java/lang/StringBuilder
+      28: dup
+      29: invokespecial #39                 // Method java/lang/StringBuilder."<init>":()V
+      32: aload_0
+      33: invokevirtual #43                 // Method com/typosafe/java/Pojo.getName:()Ljava/lang/String;
+      36: invokevirtual #47                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      39: bipush        45
+      41: invokevirtual #50                 // Method java/lang/StringBuilder.append:(C)Ljava/lang/StringBuilder;
+      44: aload_0
+      45: invokevirtual #53                 // Method com/typosafe/java/Pojo.getAge:()I
+      48: invokevirtual #56                 // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+      51: invokevirtual #59                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      54: areturn
+}

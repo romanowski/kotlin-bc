@@ -1,0 +1,17 @@
+Compiled from "LazyPropertu.kt"
+public final class com.typosafe.kotlin.LazyPropertuKt {
+  public static final void main(java.lang.String[]);
+    Code:
+       0: aload_0
+       1: ldc           #9                  // String arg
+       3: invokestatic  #15                 // Method kotlin/jvm/internal/Intrinsics.checkParameterIsNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       6: new           #17                 // class com/typosafe/kotlin/Loop
+       9: dup
+      10: invokespecial #21                 // Method com/typosafe/kotlin/Loop."<init>":()V
+      13: invokevirtual #25                 // Method com/typosafe/kotlin/Loop.getLoop1:()Ljava/lang/String;
+      16: astore_1
+      17: getstatic     #31                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      20: aload_1
+      21: invokevirtual #37                 // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+      24: return
+}

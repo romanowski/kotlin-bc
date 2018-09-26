@@ -1,0 +1,4 @@
+Benchmark                                              Mode  Cnt      Score       Error   Units
+KotlinSpecific.companionObjectFunction                thrpt    5      0.185 ±     0.179  ops/us
+KotlinSpecific.extensionFunction                      thrpt    5      0.186 ±     0.177  ops/us
+KotlinSpecific.staticFunction                         thrpt    5      0.184 ±     0.174  ops/us

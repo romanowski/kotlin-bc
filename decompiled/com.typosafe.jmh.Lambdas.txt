@@ -1,0 +1,48 @@
+Compiled from "Lambdas.java"
+public class com.typosafe.jmh.Lambdas {
+  public com.typosafe.jmh.Lambdas();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public java.lang.Object testLambdaJava();
+    Code:
+       0: getstatic     #2                  // Field com/typosafe/Instances.javaLambdas:Lcom/typosafe/java/JavaLambdas;
+       3: getstatic     #3                  // Field com/typosafe/Instances.logins:Ljava/util/List;
+       6: invokevirtual #4                  // Method com/typosafe/java/JavaLambdas.filterAndMap:(Ljava/util/List;)Ljava/util/List;
+       9: areturn
+
+  public java.lang.Object testLambdaKotlin();
+    Code:
+       0: getstatic     #5                  // Field com/typosafe/Instances.kotlinLambdas:Lcom/typosafe/kotlin/KotlinLambdas;
+       3: getstatic     #3                  // Field com/typosafe/Instances.logins:Ljava/util/List;
+       6: invokevirtual #6                  // Method com/typosafe/kotlin/KotlinLambdas.filterAndMap:(Ljava/util/List;)Ljava/util/List;
+       9: areturn
+
+  public java.lang.Object testPassingJavaLambda();
+    Code:
+       0: getstatic     #2                  // Field com/typosafe/Instances.javaLambdas:Lcom/typosafe/java/JavaLambdas;
+       3: invokevirtual #7                  // Method com/typosafe/java/JavaLambdas.passClosure:()Ljava/lang/String;
+       6: areturn
+
+  public java.lang.Object testPassingKotlinLambda();
+    Code:
+       0: getstatic     #5                  // Field com/typosafe/Instances.kotlinLambdas:Lcom/typosafe/kotlin/KotlinLambdas;
+       3: invokevirtual #8                  // Method com/typosafe/kotlin/KotlinLambdas.passClosure:()Ljava/lang/String;
+       6: areturn
+
+  public java.lang.Object testPassingJavaClosure();
+    Code:
+       0: getstatic     #2                  // Field com/typosafe/Instances.javaLambdas:Lcom/typosafe/java/JavaLambdas;
+       3: ldc           #9                  // String benchmarking
+       5: invokevirtual #10                 // Method com/typosafe/java/JavaLambdas.passClosure:(Ljava/lang/String;)Ljava/lang/String;
+       8: areturn
+
+  public java.lang.Object testPassingKotlinClosure();
+    Code:
+       0: getstatic     #5                  // Field com/typosafe/Instances.kotlinLambdas:Lcom/typosafe/kotlin/KotlinLambdas;
+       3: ldc           #9                  // String benchmarking
+       5: invokevirtual #11                 // Method com/typosafe/kotlin/KotlinLambdas.passClosure:(Ljava/lang/String;)Ljava/lang/String;
+       8: areturn
+}
