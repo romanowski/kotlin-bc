@@ -7,7 +7,7 @@ fun main(args: Array<String> ){
     val kotlinMethods = KotlinMethods()
     val javaMethods = JavaMethods()
 
-    val N = 1000000
+    val N = 9000000
 
     val beforeKotlin = System.nanoTime()
     for(i in 1..N) kotlinMethods.size("Ala")
@@ -18,5 +18,5 @@ fun main(args: Array<String> ){
     for(i in 1..N) javaMethods.size("Ala")
     val javaTime = (System.nanoTime() - beforeJava) / 1000
 
-    println("Running $N times. Kotlin: $kotlinTime ms Java: $javaTime ms")
+    println("Running $N times. Kotlin: $kotlinTime us Java: $javaTime ms")
 }

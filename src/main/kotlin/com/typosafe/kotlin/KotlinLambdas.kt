@@ -7,7 +7,7 @@ class KotlinLambdas {
     fun filterAndMap(list: List<String>): List<String> =
             list.filter { it.startsWith("Ala") }.map { it.replace(" +".toRegex(), "_").toLowerCase() }
 
-    fun passClosure(): String {
+    fun passLambda(): String {
         return Instances.printUserList { n -> n.toLowerCase().substring(2, 5) }
     }
 

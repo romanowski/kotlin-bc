@@ -23,12 +23,12 @@ public class Lambdas {
 
   @Benchmark
   public Object testPassingJavaLambda(){
-    return javaLambdas.passClosure() ;
+    return javaLambdas.passLambda() ;
   }
 
   @Benchmark
   public Object testPassingKotlinLambda(){
-    return kotlinLambdas.passClosure() ;
+    return kotlinLambdas.passLambda() ;
   }
 
   @Benchmark

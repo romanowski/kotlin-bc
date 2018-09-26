@@ -13,6 +13,7 @@ import static com.typosafe.Instances.*;
 @Fork(value = 1)
 @BenchmarkMode(Mode.Throughput)
 public class MethodCallsBench {
+
   @Benchmark
   public void testMethodJava(Blackhole bh) {
     for (Object current : randomObjects) {
@@ -44,7 +45,7 @@ public class MethodCallsBench {
   @Benchmark
   public void testSimplerMethodBaseline(Blackhole bh) {
     for (String name : logins) {
-      bh.consume(name.length() > 0);
+      bh.consume(name.length() > 4);
     }
   }
 

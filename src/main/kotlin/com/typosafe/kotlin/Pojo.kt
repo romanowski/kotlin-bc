@@ -13,5 +13,3 @@ class Pojo {
         }
     }
 }
-
-fun Pojo.login(): String = "$name-$age"

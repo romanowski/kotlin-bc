@@ -13,7 +13,7 @@ public class JavaLambdas {
       .collect(Collectors.toList());
   }
 
-  public String passClosure() {
+  public String passLambda() {
     return Instances.printUserList(n -> n.toLowerCase().substring(2, 5));
   }
 
