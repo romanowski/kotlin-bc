@@ -1,0 +1,4 @@
+Benchmark                                          Mode  Cnt  Score   Error   Units
+NullSafetyBench.java                              thrpt    5  1.138 ± 0.025  ops/us
+NullSafetyBench.notNullKotlin                     thrpt    5  1.133 ± 0.025  ops/us
+NullSafetyBench.nullableKotlin                    thrpt    5  1.035 ± 0.023  ops/us

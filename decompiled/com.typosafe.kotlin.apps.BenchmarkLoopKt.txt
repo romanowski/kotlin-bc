@@ -13,7 +13,7 @@ public final class com.typosafe.kotlin.apps.BenchmarkLoopKt {
       17: dup
       18: invokespecial #24                 // Method com/typosafe/java/JavaMethods."<init>":()V
       21: astore_2
-      22: ldc           #25                 // int 9000000
+      22: ldc           #25                 // int 30000000
       24: istore_3
       25: invokestatic  #31                 // Method java/lang/System.nanoTime:()J
       28: lstore        4

@@ -1,8 +1,0 @@
-Benchmark                                                 Mode  Cnt      Score       Error   Units
-MethodCallsBenchmarks.testFibJava                        thrpt    5     30.308 ±     0.581  ops/us
-MethodCallsBenchmarks.testFibKotlin                      thrpt    5     30.347 ±     0.518  ops/us
-MethodCallsBenchmarks.testMethodJava                     thrpt    5      1.065 ±     0.026  ops/us
-MethodCallsBenchmarks.testMethodKotlin                   thrpt    5      1.070 ±     0.014  ops/us
-MethodCallsBenchmarks.testSimplerMethodBaseline          thrpt    5      0.779 ±     0.013  ops/us
-MethodCallsBenchmarks.testSimplerMethodJava              thrpt    5      0.781 ±     0.031  ops/us
-MethodCallsBenchmarks.testSimplerMethodKotlin            thrpt    5      0.709 ±     0.023  ops/us

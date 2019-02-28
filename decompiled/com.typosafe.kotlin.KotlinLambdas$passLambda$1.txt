@@ -60,7 +60,7 @@ final class com.typosafe.kotlin.KotlinLambdas$passLambda$1<T, R> implements java
     Code:
        0: new           #2                  // class com/typosafe/kotlin/KotlinLambdas$passLambda$1
        3: dup
-       4: invokespecial #71                 // Method "<init>":()V
-       7: putstatic     #73                 // Field INSTANCE:Lcom/typosafe/kotlin/KotlinLambdas$passLambda$1;
+       4: invokespecial #70                 // Method "<init>":()V
+       7: putstatic     #72                 // Field INSTANCE:Lcom/typosafe/kotlin/KotlinLambdas$passLambda$1;
       10: return
 }

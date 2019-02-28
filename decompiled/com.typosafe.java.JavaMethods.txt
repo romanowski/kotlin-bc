@@ -29,7 +29,7 @@ public class com.typosafe.java.JavaMethods {
       36: iconst_1
       37: ireturn
 
-  public boolean baseLenght(java.lang.String);
+  public boolean baseLength(java.lang.String);
     Code:
        0: aload_1
        1: invokevirtual #3                  // Method java/lang/String.length:()I
@@ -38,34 +38,4 @@ public class com.typosafe.java.JavaMethods {
        8: goto          12
       11: iconst_0
       12: ireturn
-
-  public int fib(java.lang.Object);
-    Code:
-       0: aload_1
-       1: instanceof    #2                  // class java/lang/String
-       4: ifeq          44
-       7: aload_1
-       8: checkcast     #2                  // class java/lang/String
-      11: invokestatic  #6                  // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
-      14: istore_2
-      15: iconst_0
-      16: istore_3
-      17: iconst_1
-      18: istore        4
-      20: iload_2
-      21: ifle          42
-      24: iload_3
-      25: istore        5
-      27: iload_3
-      28: iload         4
-      30: iadd
-      31: istore_3
-      32: iload         5
-      34: istore        4
-      36: iinc          2, -1
-      39: goto          20
-      42: iload_3
-      43: ireturn
-      44: iconst_0
-      45: ireturn
 }

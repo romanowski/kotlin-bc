@@ -1,0 +1,7 @@
+Benchmark                                          Mode  Cnt   Score   Error   Units
+
+Lambdas.kotlinLambda                              thrpt   20  12.910 ± 2.254  ops/us
+Lambdas.javaLambda                                thrpt   20  12.580 ± 2.444  ops/us
+
+Lambdas.javaClosure                               thrpt   20   9.309 ± 1.802  ops/us
+Lambdas.kotlinClosure                             thrpt   20   7.297 ± 1.500  ops/us

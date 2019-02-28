@@ -1,0 +1,7 @@
+Benchmark                                          Mode  Cnt  Score   Error   Units
+LazySyncBench.java                                thrpt   20  0.138 ± 0.031  ops/us
+LazySyncBench.javaSync                            thrpt   20  0.142 ± 0.030  ops/us
+LazySyncBench.kotlin                              thrpt   20  0.058 ± 0.011  ops/us
+LazySyncBench.kotlinNoSync                        thrpt   20  0.079 ± 0.023  ops/us
+LazySyncBench.kotlinPublicationSync               thrpt   20  0.050 ± 0.008  ops/us
+LazySyncBench.scala                               thrpt   20  0.045 ± 0.010  ops/us

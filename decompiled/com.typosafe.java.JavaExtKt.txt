@@ -3,7 +3,7 @@ public final class com.typosafe.java.JavaExtKt {
   public static final java.lang.String updateFromLoginExt(com.typosafe.java.Pojo, java.lang.String);
     Code:
        0: aload_0
-       1: ldc           #9                  // String $receiver
+       1: ldc           #9                  // String receiver$0
        3: invokestatic  #15                 // Method kotlin/jvm/internal/Intrinsics.checkParameterIsNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
        6: aload_1
        7: ldc           #17                 // String login

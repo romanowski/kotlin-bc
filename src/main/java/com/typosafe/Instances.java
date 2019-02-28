@@ -1,7 +1,9 @@
 package com.typosafe;
 
-import com.typosafe.java.*;
-import com.typosafe.kotlin.*;
+import com.typosafe.java.JavaLambdas;
+import com.typosafe.java.JavaMethods;
+import com.typosafe.kotlin.KotlinLambdas;
+import com.typosafe.kotlin.KotlinMethods;
 
 import java.util.*;
 import java.util.function.Function;
@@ -10,15 +12,11 @@ import java.util.stream.Stream;
 
 public class Instances {
 
-  private static Random r = new Random(556783L);
-
-
   final static public KotlinMethods kotlinMethods = new KotlinMethods();
   final static public JavaMethods javaMethods = new JavaMethods();
-
   final static public KotlinLambdas kotlinLambdas = new KotlinLambdas();
   final static public JavaLambdas javaLambdas = new JavaLambdas();
-
+  private static Random r = new Random(556783L);
   final static public List<String> logins = generateLogins();
 
   static public List<Object> randomObjects =
@@ -30,16 +28,16 @@ public class Instances {
     Collections.shuffle(randomObjects, r);
   }
 
-  public static String printUserList(Function<String, String> prettyPrint){
+  public static String printUserList(Function<String, String> prettyPrint) {
     return prettyPrint.apply(
       "Ala maKota") + "\n"
       + prettyPrint.apply("Ula maPsa") + "\n"
       + prettyPrint.apply("Ala nieMaNic");
   }
 
-  private static List<Object>  randomList(){
+  private static List<Object> randomList() {
     ArrayList<Object> list = new ArrayList<>();
-    while(r.nextInt(20) != 0){
+    while (r.nextInt(20) != 0) {
       list.add(r.nextInt());
     }
     return list;

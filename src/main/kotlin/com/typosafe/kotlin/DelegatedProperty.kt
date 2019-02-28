@@ -4,13 +4,13 @@ import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
 
-class UppercaseDelegate<in T>(private var current: String): ReadWriteProperty<T, String> {
+class UppercaseDelegate<in T>(private var current: String) : ReadWriteProperty<T, String> {
     override fun getValue(thisRef: T, property: KProperty<*>): String {
-       return current
+        return current
     }
 
     override fun setValue(thisRef: T, property: KProperty<*>, value: String) {
-       current = value.toUpperCase()
+        current = value.toUpperCase()
     }
 }
 
@@ -19,17 +19,17 @@ class DelegatedProperty {
 }
 
 interface DelegateProvider {
-     fun <T: DelegateProvider>Delegate(initial: String): ReadWriteProperty<T, String>
+    fun <T : DelegateProvider> Delegate(initial: String): ReadWriteProperty<T, String>
 }
 
-abstract class AbstractField: DelegateProvider {
+abstract class AbstractField : DelegateProvider {
     var name: String by Delegate("Ala")
 }
 
-interface MyDelegageProvider: DelegateProvider {
+interface MyDelegageProvider : DelegateProvider {
     override fun <T : DelegateProvider> Delegate(initial: String): ReadWriteProperty<T, String> {
         return UppercaseDelegate(initial)
     }
 }
 
-open class ReallySlowDelegate: AbstractField(), MyDelegageProvider
+open class ReallySlowDelegate : AbstractField(), MyDelegageProvider

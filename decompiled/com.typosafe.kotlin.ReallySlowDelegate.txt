@@ -9,10 +9,10 @@ public class com.typosafe.kotlin.ReallySlowDelegate extends com.typosafe.kotlin.
   public <T extends com.typosafe.kotlin.DelegateProvider> kotlin.properties.ReadWriteProperty<T, java.lang.String> Delegate(java.lang.String);
     Code:
        0: aload_1
-       1: ldc           #17                 // String initial
-       3: invokestatic  #23                 // Method kotlin/jvm/internal/Intrinsics.checkParameterIsNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       1: ldc           #18                 // String initial
+       3: invokestatic  #24                 // Method kotlin/jvm/internal/Intrinsics.checkParameterIsNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
        6: aload_0
        7: aload_1
-       8: invokestatic  #28                 // Method com/typosafe/kotlin/MyDelegageProvider$DefaultImpls.Delegate:(Lcom/typosafe/kotlin/MyDelegageProvider;Ljava/lang/String;)Lkotlin/properties/ReadWriteProperty;
+       8: invokestatic  #29                 // Method com/typosafe/kotlin/MyDelegageProvider$DefaultImpls.Delegate:(Lcom/typosafe/kotlin/MyDelegageProvider;Ljava/lang/String;)Lkotlin/properties/ReadWriteProperty;
       11: areturn
 }

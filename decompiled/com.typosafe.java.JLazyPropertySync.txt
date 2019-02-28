@@ -25,7 +25,7 @@ public class com.typosafe.java.JLazyPropertySync {
       15: ldc           #6                  // String current name
       17: invokevirtual #7                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
       20: aload_0
-      21: getfield      #3                  // Field name:Ljava/lang/String;
+      21: getfield      #2                  // Field initial:Ljava/lang/String;
       24: invokevirtual #7                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
       27: invokevirtual #8                  // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
       30: putfield      #3                  // Field name:Ljava/lang/String;

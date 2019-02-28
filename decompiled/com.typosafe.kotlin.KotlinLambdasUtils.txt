@@ -1,0 +1,50 @@
+Compiled from "KotlinLambdas.kt"
+public final class com.typosafe.kotlin.KotlinLambdasUtils {
+  public static final com.typosafe.kotlin.KotlinLambdasUtils INSTANCE;
+
+  public final java.lang.String printUserList(kotlin.jvm.functions.Function1<? super java.lang.String, java.lang.String>);
+    Code:
+       0: aload_1
+       1: ldc           #10                 // String prettyPrint
+       3: invokestatic  #16                 // Method kotlin/jvm/internal/Intrinsics.checkParameterIsNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       6: new           #18                 // class java/lang/StringBuilder
+       9: dup
+      10: invokespecial #22                 // Method java/lang/StringBuilder."<init>":()V
+      13: aload_1
+      14: ldc           #24                 // String Ala maKota
+      16: invokeinterface #30,  2           // InterfaceMethod kotlin/jvm/functions/Function1.invoke:(Ljava/lang/Object;)Ljava/lang/Object;
+      21: checkcast     #32                 // class java/lang/String
+      24: invokevirtual #36                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      27: ldc           #38                 // String \n
+      29: invokevirtual #36                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      32: aload_1
+      33: ldc           #40                 // String Ula maPsa
+      35: invokeinterface #30,  2           // InterfaceMethod kotlin/jvm/functions/Function1.invoke:(Ljava/lang/Object;)Ljava/lang/Object;
+      40: checkcast     #32                 // class java/lang/String
+      43: invokevirtual #36                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      46: ldc           #38                 // String \n
+      48: invokevirtual #36                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      51: aload_1
+      52: ldc           #42                 // String Ala nieMaNic
+      54: invokeinterface #30,  2           // InterfaceMethod kotlin/jvm/functions/Function1.invoke:(Ljava/lang/Object;)Ljava/lang/Object;
+      59: checkcast     #32                 // class java/lang/String
+      62: invokevirtual #36                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      65: invokevirtual #46                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      68: areturn
+
+  private com.typosafe.kotlin.KotlinLambdasUtils();
+    Code:
+       0: aload_0
+       1: invokespecial #50                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  static {};
+    Code:
+       0: new           #2                  // class com/typosafe/kotlin/KotlinLambdasUtils
+       3: dup
+       4: invokespecial #67                 // Method "<init>":()V
+       7: astore_0
+       8: aload_0
+       9: putstatic     #69                 // Field INSTANCE:Lcom/typosafe/kotlin/KotlinLambdasUtils;
+      12: return
+}

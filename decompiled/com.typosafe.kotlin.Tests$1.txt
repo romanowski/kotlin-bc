@@ -14,37 +14,27 @@ final class com.typosafe.kotlin.Tests$1 extends kotlin.jvm.internal.Lambda imple
   public final void invoke(io.kotlintest.specs.AbstractStringSpec);
     Code:
        0: aload_1
-       1: ldc           #23                 // String $receiver
+       1: ldc           #23                 // String receiver$0
        3: invokestatic  #29                 // Method kotlin/jvm/internal/Intrinsics.checkParameterIsNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
        6: aload_1
-       7: ldc           #31                 // String fib in Kotlin
+       7: ldc           #31                 // String logins
        9: getstatic     #36                 // Field com/typosafe/kotlin/Tests$1$1.INSTANCE:Lcom/typosafe/kotlin/Tests$1$1;
       12: checkcast     #7                  // class kotlin/jvm/functions/Function1
       15: invokevirtual #39                 // Method io/kotlintest/specs/AbstractStringSpec.invoke:(Ljava/lang/String;Lkotlin/jvm/functions/Function1;)V
-      18: aload_1
-      19: ldc           #41                 // String fib in Java
-      21: getstatic     #46                 // Field com/typosafe/kotlin/Tests$1$2.INSTANCE:Lcom/typosafe/kotlin/Tests$1$2;
-      24: checkcast     #7                  // class kotlin/jvm/functions/Function1
-      27: invokevirtual #39                 // Method io/kotlintest/specs/AbstractStringSpec.invoke:(Ljava/lang/String;Lkotlin/jvm/functions/Function1;)V
-      30: aload_1
-      31: ldc           #48                 // String logins
-      33: getstatic     #53                 // Field com/typosafe/kotlin/Tests$1$3.INSTANCE:Lcom/typosafe/kotlin/Tests$1$3;
-      36: checkcast     #7                  // class kotlin/jvm/functions/Function1
-      39: invokevirtual #39                 // Method io/kotlintest/specs/AbstractStringSpec.invoke:(Ljava/lang/String;Lkotlin/jvm/functions/Function1;)V
-      42: return
+      18: return
 
   com.typosafe.kotlin.Tests$1();
     Code:
        0: aload_0
        1: iconst_1
-       2: invokespecial #61                 // Method kotlin/jvm/internal/Lambda."<init>":(I)V
+       2: invokespecial #48                 // Method kotlin/jvm/internal/Lambda."<init>":(I)V
        5: return
 
   static {};
     Code:
        0: new           #2                  // class com/typosafe/kotlin/Tests$1
        3: dup
-       4: invokespecial #80                 // Method "<init>":()V
-       7: putstatic     #82                 // Field INSTANCE:Lcom/typosafe/kotlin/Tests$1;
+       4: invokespecial #66                 // Method "<init>":()V
+       7: putstatic     #68                 // Field INSTANCE:Lcom/typosafe/kotlin/Tests$1;
       10: return
 }

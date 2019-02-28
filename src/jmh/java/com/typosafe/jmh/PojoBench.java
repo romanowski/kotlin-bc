@@ -14,16 +14,16 @@ import static com.typosafe.Instances.logins;
 public class PojoBench {
 
   @Benchmark
-  public void testPojoJava(Blackhole bh){
+  public void pojoJava(Blackhole bh) {
     com.typosafe.java.Pojo pojo = new com.typosafe.java.Pojo();
-    for(String name: logins){
+    for (String name : logins) {
       pojo.setName(name);
       bh.consume(pojo.getName());
     }
   }
 
   @Benchmark
-  public void testPojoKotlin(Blackhole bh) {
+  public void pojoKotlin(Blackhole bh) {
     com.typosafe.kotlin.Pojo pojo = new com.typosafe.kotlin.Pojo();
     for (String name : logins) {
       pojo.setName(name);
@@ -32,7 +32,7 @@ public class PojoBench {
   }
 
   @Benchmark
-  public void testPojoKotlinDataClass(Blackhole bh) {
+  public void dataClass(Blackhole bh) {
     com.typosafe.kotlin.DataPojo pojo = new com.typosafe.kotlin.DataPojo("ala", 123);
     for (String name : logins) {
       pojo.setName(name);

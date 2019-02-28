@@ -1,9 +1,9 @@
 package com.typosafe.kotlin.apps
 
-import com.typosafe.kotlin.*
-import com.typosafe.java.*
+import com.typosafe.java.JavaMethods
+import com.typosafe.kotlin.KotlinMethods
 
-fun main(args: Array<String> ){
+fun main(args: Array<String>) {
     val kotlinMethods = KotlinMethods()
     val javaMethods = JavaMethods()
 

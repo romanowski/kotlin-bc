@@ -1,8 +1,0 @@
-Compiled from "MethodCallsBenchNoWarmup.java"
-public class com.typosafe.jmh.MethodCallsBenchNoWarmup extends com.typosafe.jmh.MethodCallsBench {
-  public com.typosafe.jmh.MethodCallsBenchNoWarmup();
-    Code:
-       0: aload_0
-       1: invokespecial #1                  // Method com/typosafe/jmh/MethodCallsBench."<init>":()V
-       4: return
-}

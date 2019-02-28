@@ -1,0 +1,5 @@
+Benchmark                                          Mode  Cnt   Score   Error   Units
+
+LazyBench.java                                    thrpt   20   0.144 ± 0.017  ops/us
+LazyBench.kotlin                                  thrpt   20   0.062 ± 0.004  ops/us
+LazyBench.scala                                   thrpt   20   0.052 ± 0.005  ops/us

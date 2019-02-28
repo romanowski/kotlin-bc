@@ -1,0 +1,22 @@
+Compiled from "InlineBench.java"
+public class com.typosafe.jmh.InlineBench {
+  public com.typosafe.jmh.InlineBench();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public java.lang.Object javaStreamOperations();
+    Code:
+       0: getstatic     #2                  // Field com/typosafe/Instances.javaLambdas:Lcom/typosafe/java/JavaLambdas;
+       3: getstatic     #3                  // Field com/typosafe/Instances.logins:Ljava/util/List;
+       6: invokevirtual #4                  // Method com/typosafe/java/JavaLambdas.filterAndMap:(Ljava/util/List;)Ljava/util/List;
+       9: areturn
+
+  public java.lang.Object kotlinInlineMethod();
+    Code:
+       0: getstatic     #5                  // Field com/typosafe/Instances.kotlinLambdas:Lcom/typosafe/kotlin/KotlinLambdas;
+       3: getstatic     #3                  // Field com/typosafe/Instances.logins:Ljava/util/List;
+       6: invokevirtual #6                  // Method com/typosafe/kotlin/KotlinLambdas.filterAndMap:(Ljava/util/List;)Ljava/util/List;
+       9: areturn
+}

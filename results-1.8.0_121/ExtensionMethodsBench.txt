@@ -1,0 +1,4 @@
+Benchmark                                          Mode  Cnt  Score   Error   Units
+ExtensionMethodsBench.javaStaticFunction          thrpt    5  0.184 ± 0.168  ops/us
+ExtensionMethodsBench.kotlinCompanionObject       thrpt    5  0.183 ± 0.170  ops/us
+ExtensionMethodsBench.kotlinExtensionFunction     thrpt    5  0.185 ± 0.177  ops/us

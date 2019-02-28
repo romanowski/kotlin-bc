@@ -1,0 +1,60 @@
+Compiled from "KotlinLambdas.kt"
+final class com.typosafe.kotlin.KotlinLambdas$passLambdaToKotlin$1 extends kotlin.jvm.internal.Lambda implements kotlin.jvm.functions.Function1<java.lang.String, java.lang.String> {
+  public static final com.typosafe.kotlin.KotlinLambdas$passLambdaToKotlin$1 INSTANCE;
+
+  public java.lang.Object invoke(java.lang.Object);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: checkcast     #11                 // class java/lang/String
+       5: invokevirtual #14                 // Method invoke:(Ljava/lang/String;)Ljava/lang/String;
+       8: areturn
+
+  public final java.lang.String invoke(java.lang.String);
+    Code:
+       0: aload_1
+       1: ldc           #17                 // String n
+       3: invokestatic  #23                 // Method kotlin/jvm/internal/Intrinsics.checkParameterIsNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       6: aload_1
+       7: astore_2
+       8: aload_2
+       9: invokevirtual #27                 // Method java/lang/String.toLowerCase:()Ljava/lang/String;
+      12: dup
+      13: ldc           #29                 // String (this as java.lang.String).toLowerCase()
+      15: invokestatic  #32                 // Method kotlin/jvm/internal/Intrinsics.checkExpressionValueIsNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+      18: astore_2
+      19: iconst_2
+      20: istore_3
+      21: iconst_5
+      22: istore        4
+      24: aload_2
+      25: dup
+      26: ifnonnull     39
+      29: new           #34                 // class kotlin/TypeCastException
+      32: dup
+      33: ldc           #36                 // String null cannot be cast to non-null type java.lang.String
+      35: invokespecial #40                 // Method kotlin/TypeCastException."<init>":(Ljava/lang/String;)V
+      38: athrow
+      39: iload_3
+      40: iload         4
+      42: invokevirtual #44                 // Method java/lang/String.substring:(II)Ljava/lang/String;
+      45: dup
+      46: ldc           #46                 // String (this as java.lang.Strin…ing(startIndex, endIndex)
+      48: invokestatic  #32                 // Method kotlin/jvm/internal/Intrinsics.checkExpressionValueIsNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+      51: areturn
+
+  com.typosafe.kotlin.KotlinLambdas$passLambdaToKotlin$1();
+    Code:
+       0: aload_0
+       1: iconst_1
+       2: invokespecial #53                 // Method kotlin/jvm/internal/Lambda."<init>":(I)V
+       5: return
+
+  static {};
+    Code:
+       0: new           #2                  // class com/typosafe/kotlin/KotlinLambdas$passLambdaToKotlin$1
+       3: dup
+       4: invokespecial #74                 // Method "<init>":()V
+       7: putstatic     #76                 // Field INSTANCE:Lcom/typosafe/kotlin/KotlinLambdas$passLambdaToKotlin$1;
+      10: return
+}

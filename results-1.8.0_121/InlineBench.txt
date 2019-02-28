@@ -1,0 +1,3 @@
+Benchmark                                          Mode  Cnt  Score   Error   Units
+InlineBench.javaStreamOperations                  thrpt   20  0.012 ± 0.002  ops/us
+InlineBench.kotlinInlineMethod                    thrpt   20  0.012 ± 0.002  ops/us

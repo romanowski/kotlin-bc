@@ -6,7 +6,7 @@ public class com.typosafe.jmh.LazyBench {
        1: invokespecial #1                  // Method java/lang/Object."<init>":()V
        4: return
 
-  public void testJavaNoSync(org.openjdk.jmh.infra.Blackhole);
+  public void java(org.openjdk.jmh.infra.Blackhole);
     Code:
        0: getstatic     #2                  // Field com/typosafe/Instances.logins:Ljava/util/List;
        3: invokeinterface #3,  1            // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
@@ -18,27 +18,27 @@ public class com.typosafe.jmh.LazyBench {
       19: invokeinterface #5,  1            // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
       24: checkcast     #6                  // class java/lang/String
       27: astore_3
-      28: new           #7                  // class com/typosafe/java/JLazyPropertyNoSynch
+      28: new           #7                  // class com/typosafe/java/JLazyProperty
       31: dup
       32: aload_3
-      33: invokespecial #8                  // Method com/typosafe/java/JLazyPropertyNoSynch."<init>":(Ljava/lang/String;)V
+      33: invokespecial #8                  // Method com/typosafe/java/JLazyProperty."<init>":(Ljava/lang/String;)V
       36: astore        4
       38: aload_1
       39: aload         4
-      41: invokevirtual #9                  // Method com/typosafe/java/JLazyPropertyNoSynch.getName:()Ljava/lang/String;
+      41: invokevirtual #9                  // Method com/typosafe/java/JLazyProperty.getName:()Ljava/lang/String;
       44: invokevirtual #10                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Ljava/lang/Object;)V
       47: aload_1
       48: aload         4
-      50: invokevirtual #9                  // Method com/typosafe/java/JLazyPropertyNoSynch.getName:()Ljava/lang/String;
+      50: invokevirtual #9                  // Method com/typosafe/java/JLazyProperty.getName:()Ljava/lang/String;
       53: invokevirtual #10                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Ljava/lang/Object;)V
       56: aload_1
       57: aload         4
-      59: invokevirtual #9                  // Method com/typosafe/java/JLazyPropertyNoSynch.getName:()Ljava/lang/String;
+      59: invokevirtual #9                  // Method com/typosafe/java/JLazyProperty.getName:()Ljava/lang/String;
       62: invokevirtual #10                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Ljava/lang/Object;)V
       65: goto          9
       68: return
 
-  public void testJavaSync(org.openjdk.jmh.infra.Blackhole);
+  public void kotlin(org.openjdk.jmh.infra.Blackhole);
     Code:
        0: getstatic     #2                  // Field com/typosafe/Instances.logins:Ljava/util/List;
        3: invokeinterface #3,  1            // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
@@ -50,27 +50,27 @@ public class com.typosafe.jmh.LazyBench {
       19: invokeinterface #5,  1            // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
       24: checkcast     #6                  // class java/lang/String
       27: astore_3
-      28: new           #11                 // class com/typosafe/java/JLazyPropertySync
+      28: new           #11                 // class com/typosafe/kotlin/LazyProperty
       31: dup
       32: aload_3
-      33: invokespecial #12                 // Method com/typosafe/java/JLazyPropertySync."<init>":(Ljava/lang/String;)V
+      33: invokespecial #12                 // Method com/typosafe/kotlin/LazyProperty."<init>":(Ljava/lang/String;)V
       36: astore        4
       38: aload_1
       39: aload         4
-      41: invokevirtual #13                 // Method com/typosafe/java/JLazyPropertySync.getName:()Ljava/lang/String;
+      41: invokevirtual #13                 // Method com/typosafe/kotlin/LazyProperty.getName:()Ljava/lang/String;
       44: invokevirtual #10                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Ljava/lang/Object;)V
       47: aload_1
       48: aload         4
-      50: invokevirtual #13                 // Method com/typosafe/java/JLazyPropertySync.getName:()Ljava/lang/String;
+      50: invokevirtual #13                 // Method com/typosafe/kotlin/LazyProperty.getName:()Ljava/lang/String;
       53: invokevirtual #10                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Ljava/lang/Object;)V
       56: aload_1
       57: aload         4
-      59: invokevirtual #13                 // Method com/typosafe/java/JLazyPropertySync.getName:()Ljava/lang/String;
+      59: invokevirtual #13                 // Method com/typosafe/kotlin/LazyProperty.getName:()Ljava/lang/String;
       62: invokevirtual #10                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Ljava/lang/Object;)V
       65: goto          9
       68: return
 
-  public void testKotlinSync(org.openjdk.jmh.infra.Blackhole);
+  public void scala(org.openjdk.jmh.infra.Blackhole);
     Code:
        0: getstatic     #2                  // Field com/typosafe/Instances.logins:Ljava/util/List;
        3: invokeinterface #3,  1            // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
@@ -82,118 +82,22 @@ public class com.typosafe.jmh.LazyBench {
       19: invokeinterface #5,  1            // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
       24: checkcast     #6                  // class java/lang/String
       27: astore_3
-      28: new           #14                 // class com/typosafe/kotlin/LazyPropertySynch
+      28: new           #14                 // class com/typosafe/scala/SLazyProperty
       31: dup
       32: aload_3
-      33: invokespecial #15                 // Method com/typosafe/kotlin/LazyPropertySynch."<init>":(Ljava/lang/String;)V
+      33: invokespecial #15                 // Method com/typosafe/scala/SLazyProperty."<init>":(Ljava/lang/String;)V
       36: astore        4
       38: aload_1
       39: aload         4
-      41: invokevirtual #16                 // Method com/typosafe/kotlin/LazyPropertySynch.getName:()Ljava/lang/String;
+      41: invokevirtual #16                 // Method com/typosafe/scala/SLazyProperty.name:()Ljava/lang/String;
       44: invokevirtual #10                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Ljava/lang/Object;)V
       47: aload_1
       48: aload         4
-      50: invokevirtual #16                 // Method com/typosafe/kotlin/LazyPropertySynch.getName:()Ljava/lang/String;
+      50: invokevirtual #16                 // Method com/typosafe/scala/SLazyProperty.name:()Ljava/lang/String;
       53: invokevirtual #10                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Ljava/lang/Object;)V
       56: aload_1
       57: aload         4
-      59: invokevirtual #16                 // Method com/typosafe/kotlin/LazyPropertySynch.getName:()Ljava/lang/String;
-      62: invokevirtual #10                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Ljava/lang/Object;)V
-      65: goto          9
-      68: return
-
-  public void testKotlinNoSync(org.openjdk.jmh.infra.Blackhole);
-    Code:
-       0: getstatic     #2                  // Field com/typosafe/Instances.logins:Ljava/util/List;
-       3: invokeinterface #3,  1            // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
-       8: astore_2
-       9: aload_2
-      10: invokeinterface #4,  1            // InterfaceMethod java/util/Iterator.hasNext:()Z
-      15: ifeq          68
-      18: aload_2
-      19: invokeinterface #5,  1            // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
-      24: checkcast     #6                  // class java/lang/String
-      27: astore_3
-      28: new           #17                 // class com/typosafe/kotlin/LazyPropertyNoSynch
-      31: dup
-      32: aload_3
-      33: invokespecial #18                 // Method com/typosafe/kotlin/LazyPropertyNoSynch."<init>":(Ljava/lang/String;)V
-      36: astore        4
-      38: aload_1
-      39: aload         4
-      41: invokevirtual #19                 // Method com/typosafe/kotlin/LazyPropertyNoSynch.getName:()Ljava/lang/String;
-      44: invokevirtual #10                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Ljava/lang/Object;)V
-      47: aload_1
-      48: aload         4
-      50: invokevirtual #19                 // Method com/typosafe/kotlin/LazyPropertyNoSynch.getName:()Ljava/lang/String;
-      53: invokevirtual #10                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Ljava/lang/Object;)V
-      56: aload_1
-      57: aload         4
-      59: invokevirtual #19                 // Method com/typosafe/kotlin/LazyPropertyNoSynch.getName:()Ljava/lang/String;
-      62: invokevirtual #10                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Ljava/lang/Object;)V
-      65: goto          9
-      68: return
-
-  public void testKotlinPublicationSynch(org.openjdk.jmh.infra.Blackhole);
-    Code:
-       0: getstatic     #2                  // Field com/typosafe/Instances.logins:Ljava/util/List;
-       3: invokeinterface #3,  1            // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
-       8: astore_2
-       9: aload_2
-      10: invokeinterface #4,  1            // InterfaceMethod java/util/Iterator.hasNext:()Z
-      15: ifeq          68
-      18: aload_2
-      19: invokeinterface #5,  1            // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
-      24: checkcast     #6                  // class java/lang/String
-      27: astore_3
-      28: new           #20                 // class com/typosafe/kotlin/LazyPropertyPublicationSynch
-      31: dup
-      32: aload_3
-      33: invokespecial #21                 // Method com/typosafe/kotlin/LazyPropertyPublicationSynch."<init>":(Ljava/lang/String;)V
-      36: astore        4
-      38: aload_1
-      39: aload         4
-      41: invokevirtual #22                 // Method com/typosafe/kotlin/LazyPropertyPublicationSynch.getName:()Ljava/lang/String;
-      44: invokevirtual #10                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Ljava/lang/Object;)V
-      47: aload_1
-      48: aload         4
-      50: invokevirtual #22                 // Method com/typosafe/kotlin/LazyPropertyPublicationSynch.getName:()Ljava/lang/String;
-      53: invokevirtual #10                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Ljava/lang/Object;)V
-      56: aload_1
-      57: aload         4
-      59: invokevirtual #22                 // Method com/typosafe/kotlin/LazyPropertyPublicationSynch.getName:()Ljava/lang/String;
-      62: invokevirtual #10                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Ljava/lang/Object;)V
-      65: goto          9
-      68: return
-
-  public void testScala(org.openjdk.jmh.infra.Blackhole);
-    Code:
-       0: getstatic     #2                  // Field com/typosafe/Instances.logins:Ljava/util/List;
-       3: invokeinterface #3,  1            // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
-       8: astore_2
-       9: aload_2
-      10: invokeinterface #4,  1            // InterfaceMethod java/util/Iterator.hasNext:()Z
-      15: ifeq          68
-      18: aload_2
-      19: invokeinterface #5,  1            // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
-      24: checkcast     #6                  // class java/lang/String
-      27: astore_3
-      28: new           #23                 // class com/typosafe/scala/SLazyProperty
-      31: dup
-      32: aload_3
-      33: invokespecial #24                 // Method com/typosafe/scala/SLazyProperty."<init>":(Ljava/lang/String;)V
-      36: astore        4
-      38: aload_1
-      39: aload         4
-      41: invokevirtual #25                 // Method com/typosafe/scala/SLazyProperty.name:()Ljava/lang/String;
-      44: invokevirtual #10                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Ljava/lang/Object;)V
-      47: aload_1
-      48: aload         4
-      50: invokevirtual #25                 // Method com/typosafe/scala/SLazyProperty.name:()Ljava/lang/String;
-      53: invokevirtual #10                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Ljava/lang/Object;)V
-      56: aload_1
-      57: aload         4
-      59: invokevirtual #25                 // Method com/typosafe/scala/SLazyProperty.name:()Ljava/lang/String;
+      59: invokevirtual #16                 // Method com/typosafe/scala/SLazyProperty.name:()Ljava/lang/String;
       62: invokevirtual #10                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Ljava/lang/Object;)V
       65: goto          9
       68: return

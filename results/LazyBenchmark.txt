@@ -1,7 +1,0 @@
-Benchmark                                              Mode  Cnt      Score       Error   Units
-LazyBenchmark.testJavaNoSync                          thrpt   20      0.166 ±     0.043  ops/us
-LazyBenchmark.testJavaSync                            thrpt   20      0.167 ±     0.042  ops/us
-LazyBenchmark.testKotlinNoSync                        thrpt   20      0.080 ±     0.023  ops/us
-LazyBenchmark.testKotlinPublicationSynch              thrpt   20      0.050 ±     0.008  ops/us
-LazyBenchmark.testKotlinSync                          thrpt   20      0.057 ±     0.011  ops/us
-LazyBenchmark.testScala                               thrpt   20      0.043 ±     0.009  ops/us

@@ -1,10 +1,7 @@
 package com.typosafe.jmh;
 
-import com.typosafe.java.JLazyPropertyNoSynch;
-import com.typosafe.java.JLazyPropertySync;
-import com.typosafe.kotlin.LazyPropertyNoSynch;
-import com.typosafe.kotlin.LazyPropertyPublicationSynch;
-import com.typosafe.kotlin.LazyPropertySynch;
+import com.typosafe.java.JLazyProperty;
+import com.typosafe.kotlin.LazyProperty;
 import com.typosafe.scala.SLazyProperty;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
@@ -19,9 +16,9 @@ import static com.typosafe.Instances.logins;
 @Fork(value = 4)
 public class LazyBench {
   @Benchmark
-  public void testJavaNoSync(Blackhole bh) {
+  public void java(Blackhole bh) {
     for (String name : logins) {
-      JLazyPropertyNoSynch prop = new JLazyPropertyNoSynch(name);
+      JLazyProperty prop = new JLazyProperty(name);
       bh.consume(prop.getName());
       bh.consume(prop.getName());
       bh.consume(prop.getName());
@@ -29,9 +26,9 @@ public class LazyBench {
   }
 
   @Benchmark
-  public void testJavaSync(Blackhole bh) {
+  public void kotlin(Blackhole bh) {
     for (String name : logins) {
-      JLazyPropertySync prop = new JLazyPropertySync(name);
+      LazyProperty prop = new LazyProperty(name);
       bh.consume(prop.getName());
       bh.consume(prop.getName());
       bh.consume(prop.getName());
@@ -39,37 +36,7 @@ public class LazyBench {
   }
 
   @Benchmark
-  public void testKotlinSync(Blackhole bh) {
-    for (String name : logins) {
-      LazyPropertySynch prop = new LazyPropertySynch(name);
-      bh.consume(prop.getName());
-      bh.consume(prop.getName());
-      bh.consume(prop.getName());
-    }
-  }
-
-  @Benchmark
-  public void testKotlinNoSync(Blackhole bh) {
-    for (String name : logins) {
-      LazyPropertyNoSynch prop = new LazyPropertyNoSynch(name);
-      bh.consume(prop.getName());
-      bh.consume(prop.getName());
-      bh.consume(prop.getName());
-    }
-  }
-
-  @Benchmark
-  public void testKotlinPublicationSynch(Blackhole bh) {
-    for (String name : logins) {
-      LazyPropertyPublicationSynch prop = new LazyPropertyPublicationSynch(name);
-      bh.consume(prop.getName());
-      bh.consume(prop.getName());
-      bh.consume(prop.getName());
-    }
-  }
-
-  @Benchmark
-  public void testScala(Blackhole bh) {
+  public void scala(Blackhole bh) {
     for (String name : logins) {
       SLazyProperty prop = new SLazyProperty(name);
       bh.consume(prop.name());

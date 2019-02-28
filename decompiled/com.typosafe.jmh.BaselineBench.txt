@@ -1,0 +1,110 @@
+Compiled from "BaselineBench.java"
+public class com.typosafe.jmh.BaselineBench {
+  public com.typosafe.jmh.BaselineBench();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public void javaBaseline1(org.openjdk.jmh.infra.Blackhole);
+    Code:
+       0: getstatic     #2                  // Field com/typosafe/Instances.logins:Ljava/util/List;
+       3: invokeinterface #3,  1            // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+       8: astore_2
+       9: aload_2
+      10: invokeinterface #4,  1            // InterfaceMethod java/util/Iterator.hasNext:()Z
+      15: ifeq          48
+      18: aload_2
+      19: invokeinterface #5,  1            // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      24: checkcast     #6                  // class java/lang/String
+      27: astore_3
+      28: aload_1
+      29: aload_3
+      30: invokevirtual #7                  // Method java/lang/String.length:()I
+      33: iconst_4
+      34: if_icmple     41
+      37: iconst_1
+      38: goto          42
+      41: iconst_0
+      42: invokevirtual #8                  // Method org/openjdk/jmh/infra/Blackhole.consume:(Z)V
+      45: goto          9
+      48: return
+
+  public void javaBaseline2(org.openjdk.jmh.infra.Blackhole);
+    Code:
+       0: getstatic     #2                  // Field com/typosafe/Instances.logins:Ljava/util/List;
+       3: invokeinterface #3,  1            // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+       8: astore_2
+       9: aload_2
+      10: invokeinterface #4,  1            // InterfaceMethod java/util/Iterator.hasNext:()Z
+      15: ifeq          42
+      18: aload_2
+      19: invokeinterface #5,  1            // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      24: checkcast     #6                  // class java/lang/String
+      27: astore_3
+      28: aload_1
+      29: getstatic     #9                  // Field com/typosafe/Instances.javaMethods:Lcom/typosafe/java/JavaMethods;
+      32: aload_3
+      33: invokevirtual #10                 // Method com/typosafe/java/JavaMethods.baseLength:(Ljava/lang/String;)Z
+      36: invokevirtual #8                  // Method org/openjdk/jmh/infra/Blackhole.consume:(Z)V
+      39: goto          9
+      42: return
+
+  public void javaMethod(org.openjdk.jmh.infra.Blackhole);
+    Code:
+       0: getstatic     #11                 // Field com/typosafe/Instances.randomObjects:Ljava/util/List;
+       3: invokeinterface #3,  1            // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+       8: astore_2
+       9: aload_2
+      10: invokeinterface #4,  1            // InterfaceMethod java/util/Iterator.hasNext:()Z
+      15: ifeq          39
+      18: aload_2
+      19: invokeinterface #5,  1            // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      24: astore_3
+      25: aload_1
+      26: getstatic     #9                  // Field com/typosafe/Instances.javaMethods:Lcom/typosafe/java/JavaMethods;
+      29: aload_3
+      30: invokevirtual #12                 // Method com/typosafe/java/JavaMethods.size:(Ljava/lang/Object;)I
+      33: invokevirtual #13                 // Method org/openjdk/jmh/infra/Blackhole.consume:(I)V
+      36: goto          9
+      39: return
+
+  public void kotlinBaseline(org.openjdk.jmh.infra.Blackhole);
+    Code:
+       0: getstatic     #2                  // Field com/typosafe/Instances.logins:Ljava/util/List;
+       3: invokeinterface #3,  1            // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+       8: astore_2
+       9: aload_2
+      10: invokeinterface #4,  1            // InterfaceMethod java/util/Iterator.hasNext:()Z
+      15: ifeq          42
+      18: aload_2
+      19: invokeinterface #5,  1            // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      24: checkcast     #6                  // class java/lang/String
+      27: astore_3
+      28: aload_1
+      29: getstatic     #14                 // Field com/typosafe/Instances.kotlinMethods:Lcom/typosafe/kotlin/KotlinMethods;
+      32: aload_3
+      33: invokevirtual #15                 // Method com/typosafe/kotlin/KotlinMethods.basicLength:(Ljava/lang/String;)Z
+      36: invokevirtual #8                  // Method org/openjdk/jmh/infra/Blackhole.consume:(Z)V
+      39: goto          9
+      42: return
+
+  public void testMethodKotlin(org.openjdk.jmh.infra.Blackhole);
+    Code:
+       0: getstatic     #11                 // Field com/typosafe/Instances.randomObjects:Ljava/util/List;
+       3: invokeinterface #3,  1            // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+       8: astore_2
+       9: aload_2
+      10: invokeinterface #4,  1            // InterfaceMethod java/util/Iterator.hasNext:()Z
+      15: ifeq          39
+      18: aload_2
+      19: invokeinterface #5,  1            // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      24: astore_3
+      25: aload_1
+      26: getstatic     #14                 // Field com/typosafe/Instances.kotlinMethods:Lcom/typosafe/kotlin/KotlinMethods;
+      29: aload_3
+      30: invokevirtual #16                 // Method com/typosafe/kotlin/KotlinMethods.size:(Ljava/lang/Object;)I
+      33: invokevirtual #13                 // Method org/openjdk/jmh/infra/Blackhole.consume:(I)V
+      36: goto          9
+      39: return
+}

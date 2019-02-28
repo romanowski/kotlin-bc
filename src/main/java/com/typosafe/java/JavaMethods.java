@@ -16,25 +16,7 @@ public class JavaMethods {
     return 1;
   }
 
-  public boolean baseLenght(String a) {
+  public boolean baseLength(String a) {
     return a.length() > 0;
-  }
-
-
-  public int fib(Object to) {
-    if (to instanceof String) {
-      int n = Integer.parseInt((String) to);
-      int a = 0;
-      int b = 1;
-      while (n > 0) {
-        int c = a;
-        a = a + b;
-        b = c;
-        n--;
-      }
-
-      return a;
-    }
-    return 0;
   }
 }

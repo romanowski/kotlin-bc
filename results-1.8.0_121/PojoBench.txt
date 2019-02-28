@@ -1,0 +1,4 @@
+Benchmark                                          Mode  Cnt  Score   Error   Units
+PojoBench.dataClass                               thrpt   20  0.872 ± 0.030  ops/us
+PojoBench.pojoJava                                thrpt   20  0.855 ± 0.049  ops/us
+PojoBench.pojoKotlin                              thrpt   20  0.875 ± 0.021  ops/us

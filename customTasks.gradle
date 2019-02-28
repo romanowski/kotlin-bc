@@ -1,7 +1,10 @@
 import java.util.jar.JarFile
 
+
+def dirName = "results-${System.getProperty("java.version")}"
+
 jmh {
-    resultsFile project.file("results/all.txt")
+    resultsFile project.file("$dirName/all.txt")
     resultFormat 'TEXT'
 }
 
@@ -50,7 +53,7 @@ task runJavap {
 task niceResults {
     dependsOn project.tasks.jmh
     doLast {
-        File base = project.file("results")
+        File base = project.file(dirName)
         List<String> lines = jmh.resultsFile.readLines()
         String header = lines.get(0)
         lines.groupBy { String line ->

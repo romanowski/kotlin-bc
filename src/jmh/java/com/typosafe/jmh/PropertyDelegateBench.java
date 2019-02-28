@@ -16,41 +16,38 @@ import static com.typosafe.Instances.logins;
 @Fork(value = 4)
 public class PropertyDelegateBench {
   @Benchmark
-  public void testPropertyDelegateBaseline(Blackhole bh){
+  public void baseline(Blackhole bh) {
     com.typosafe.kotlin.Pojo pojo = new com.typosafe.kotlin.Pojo();
-    for(String name: logins){
+    for (String name : logins) {
       pojo.setName(name.toLowerCase());
       bh.consume(pojo.getName());
     }
   }
 
   @Benchmark
-  public void testPropertyDelegateJava(Blackhole bh){
+  public void javaPropertyDelegate(Blackhole bh) {
     DelegatedPropertyLikeJava pojo = new DelegatedPropertyLikeJava();
-    for(String name: logins){
+    for (String name : logins) {
       pojo.setName(name);
       bh.consume(pojo.getName());
     }
   }
 
   @Benchmark
-  public void testPropertyDelegateKotlin(Blackhole bh){
+  public void kotlinPropertyDelegate(Blackhole bh) {
     DelegatedProperty pojo = new DelegatedProperty();
-    for(String name: logins){
+    for (String name : logins) {
       pojo.setName(name);
       bh.consume(pojo.getName());
     }
   }
-
 
   @Benchmark
-  public void testPropertyDelegateKotlinSlow(Blackhole bh){
+  public void kotlinPropertyDelegateSlow(Blackhole bh) {
     ReallySlowDelegate pojo = new ReallySlowDelegate();
-    for(String name: logins){
+    for (String name : logins) {
       pojo.setName(name);
       bh.consume(pojo.getName());
     }
   }
-
-
 }
